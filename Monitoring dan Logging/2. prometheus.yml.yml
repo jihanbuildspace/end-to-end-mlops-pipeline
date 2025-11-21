@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Model serving metrics (MODEL INFERENCE METRICS)
+  - job_name: 'model-serving'
+    static_configs:
+      - targets: ['prometheus-exporter:5000']
+    metrics_path: '/metrics'
