@@ -14,6 +14,8 @@ It encompasses the entire lifecycle: from advanced data engineering and robust m
 
 **This Final Project successfully met all Advanced Criteria and was awarded the highest score: 5/5 Stars.**
 
+<img width="1154" height="644" alt="Screenshot 2025-11-21 160852" src="https://github.com/user-attachments/assets/169f41ee-b4fc-408b-84db-9d69cf2d8a91" />
+
 ---
 
 ## ✨ Key Features & Technical Scope
