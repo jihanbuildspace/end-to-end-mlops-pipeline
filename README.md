@@ -1,112 +1,328 @@
-# 🚀 Advanced MLOps: Monitoring, Logging, and Modelling System for Insurance Data Prediction
+# 🚀 End-to-End MLOps Pipeline for Insurance Data Prediction
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-AI-orange)
+![MLOps](https://img.shields.io/badge/MLOps-Prometheus%20%7C%20Grafana-green)
 
 ## Project Overview
 
-This repository showcases the implementation of a **comprehensive, production-ready Machine Learning Operations (MLOps) pipeline** specifically engineered for high-fidelity insurance data prediction. The project's core focus is on ensuring **operational stability, system observability, and model reproducibility** alongside achieving high predictive accuracy.
+This repository showcases an end-to-end Machine Learning Operations (MLOps) pipeline developed for insurance data prediction.
 
-It encompasses the entire lifecycle: from advanced data engineering and robust model development to the deployment of a real-time monitoring infrastructure. **This project rigorously implements all Advanced Criteria requirements** set for the course, ensuring a scalable and production-ready solution.
+The project covers the complete machine learning lifecycle, including data preparation, model development, model optimization, inference workflow, monitoring, and system observability.
 
-> **Note:** This project serves as the final capstone deliverable for the Dicoding course, "Building Machine Learning Systems."
+The main objective is to build a reliable and maintainable machine learning system by integrating machine learning development practices with monitoring and operational workflows.
 
----
-
-## 🌟 Achievement
-
-**This Final Project successfully met all Advanced Criteria and was awarded the highest score: 5/5 Stars.**
-
-<img width="1154" height="644" alt="Screenshot 2025-11-21 160852" src="https://github.com/user-attachments/assets/169f41ee-b4fc-408b-84db-9d69cf2d8a91" />
+> This project was developed as the final capstone project for the Dicoding course **"Building Machine Learning Systems"**.
 
 ---
 
-## ✨ Key Features & Technical Scope
+## 🏆 Achievement
 
-* **End-to-End ML Pipeline:** Structured workflow covering data preprocessing, feature engineering, and model deployment readiness.
-* **Performance Optimization:** Systematic model development and exhaustive hyperparameter tuning to maximize predictive performance metrics (e.g., AUC, F1-Score).
-* **Real-Time Observability (Advanced Criteria):** Seamless integration of the **Prometheus-Grafana stack** for continuous tracking of critical metrics:
-    * Model Inference Latency and Throughput.
-    * Operational Model Performance (monitoring for **model drift**).
-    * System Health and Resource Utilization.
-* **Proactive Alerting (Advanced Criteria):** Implementation of threshold-based alerting within Grafana for immediate notification of system anomalies or performance degradation.
-* **Workflow Governance:** Detailed documentation of experiments and Continuous Integration (CI) workflows to guarantee full reproducibility.
+This final project successfully achieved all Advanced Criteria requirements and received the highest score:
+
+**⭐ 5/5 Stars**
+
+<img width="1154" height="644" alt="Project Achievement" src="https://github.com/user-attachments/assets/169f41ee-b4fc-408b-84db-9d69cf2d8a91" />
 
 ---
 
-## 📂 Repository Structure
+## 🌟 Project Highlights
 
-The project is logically organized into modeling and MLOps components:
-
-| Directory/File | Description |
-| :--- | :--- |
-| `ml_modeling/` | **Core Machine Learning scripts** for model building, tuning, and data preparation. |
-| ├── `modelling.py` | Primary script for model training and saving. |
-| ├── `modelling_tuning.py` | Scripts for hyperparameter optimization and evaluation. |
-| ├── `requirements.txt` | Python dependencies required for model execution. |
-| `monitoring_logging/` | **MLOps Configuration and Observability Evidence.** |
-| ├── `prometheus.yml` | Configuration file for Prometheus server. |
-| ├── `prometheus_exporter.py` | Custom Python script to expose model metrics to Prometheus. |
-| ├── `inference.py` | Script simulating model inference/prediction with metric exposure. |
-| `docs/` | Comprehensive documentation and evidence of the project. |
-| ├── `Workflow-CI.txt` | Detailed documentation of Continuous Integration steps. |
-| ├── `Experiment-Logs.txt` | Comprehensive logs and notes from the modeling experiments. |
-| ├── `bukti_monitoring_prometheus/` | Screenshots/Evidence of metrics pulled by Prometheus. |
-| ├── `bukti_monitoring_grafana/` | Visual evidence of Grafana performance dashboards. |
-| ├── `bukti_alerting_grafana/` | Evidence demonstrating the automated alerting mechanism. |
+- End-to-end machine learning lifecycle implementation.
+- Data preprocessing and feature preparation workflow.
+- Machine learning model development and optimization.
+- Hyperparameter tuning process.
+- Model inference workflow simulation.
+- Prometheus and Grafana monitoring integration.
+- System metrics visualization and observability.
+- Threshold-based alerting mechanism.
+- Continuous Integration (CI) workflow documentation.
 
 ---
 
-## ⚙️ Quick Start
+# ✨ Key Features & Technical Scope
 
-### Prerequisites
-* Python 3.x
-* Docker (Recommended for easier deployment of Prometheus/Grafana)
+## 🧠 End-to-End Machine Learning Pipeline
 
-### Installation
+The project implements a structured workflow covering:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
-    ```
+- Data preparation
+- Data preprocessing
+- Feature engineering
+- Model development
+- Model optimization
+- Model inference
 
-2.  **Install Python dependencies:**
-    ```bash
-    pip install -r "ml_modeling/requirements.txt"
-    ```
 
-3.  **Run Model Training:**
-    Execute the training script to generate the model artifact:
-    ```bash
-    python "ml_modeling/modelling.py"
-    ```
+## ⚙️ Model Development & Optimization
 
-### Running the Monitoring Stack
+The machine learning development process includes:
 
-1.  **Start the Inference Script & Exporter:**
-    The `inference.py` script simulates production traffic and exposes real-time metrics via the custom exporter.
-    ```bash
-    python "monitoring_logging/inference.py"
-    ```
-    *(Ensure the script runs on the port configured in `prometheus.yml`)*
+- Model training
+- Model experimentation
+- Hyperparameter tuning
+- Model evaluation
+- Model artifact generation
 
-2.  **Launch Prometheus and Grafana:**
-    Use Docker Compose (recommended) or launch Prometheus manually using the configuration file:
-    ```bash
-    # Example using Prometheus CLI (requires manual install)
-    prometheus --config.file="monitoring_logging/prometheus.yml"
-    ```
 
-3.  **View Dashboard:**
-    Access the configured Grafana URL and import the dashboards to visualize the metrics and observe alerts. Refer to the evidence in `docs/` for expected outputs.
+## 🚀 Model Inference Workflow
+
+Implemented inference workflow to simulate machine learning prediction services.
+
+The inference system allows the trained model to be executed and monitored through an operational workflow.
+
+
+## 📊 Monitoring & Logging System
+
+Integrated monitoring infrastructure using:
+
+- Prometheus
+- Grafana
+
+
+The monitoring system tracks:
+
+- Model inference activity
+- Application performance metrics
+- System health indicators
+- Operational behavior
+
+
+## 🔔 Alerting Mechanism
+
+Implemented threshold-based alerting using Grafana to identify:
+
+- Performance degradation
+- System anomalies
+- Operational issues
+
+
+## 🔄 Workflow Governance
+
+The project includes workflow documentation to support:
+
+- Experiment reproducibility
+- Continuous Integration (CI)
+- Structured development process
 
 ---
 
-## 🛑 Important Notes
+# 🛠️ Technology Stack
 
-* **Security:** This repository is intended for demonstration. In a production setting, ensure all API keys, sensitive configurations, and raw proprietary data are strictly excluded from public version control.
-* **Versioning:** Consider adopting tools like **MLflow** or **DVC** for superior experiment tracking and data versioning in future iterations.
+## Programming Language
+
+- Python
+
+
+## Machine Learning
+
+- Scikit-learn
+- Pandas
+- NumPy
+
+
+## MLOps & Monitoring
+
+- Prometheus
+- Grafana
+
+
+## Engineering Tools
+
+- Git
+- Continuous Integration Workflow
+- Docker (Monitoring Environment)
 
 ---
 
-## 📝 License
+# 📂 Repository Structure
 
-This project is released under the **[MIT License](LICENSE.md)**
+```
+
+SMSML_JihanKusumawardhani/
+
+│
+├── Membangun Model/
+│   │
+│   ├── modelling.py
+│   ├── modelling_tuning.py
+│   ├── requirements.txt
+│   └── preprocessing/
+│
+├── Monitoring dan Logging/
+│   │
+│   ├── inference.py
+│   ├── prometheus_exporter.py
+│   ├── prometheus.yml
+│   ├── monitoring_prometheus/
+│   ├── monitoring_grafana/
+│   └── alerting_grafana/
+│
+├── Workflow-CI.txt
+│
+└── README.md
+
+````
+
+---
+
+# ⚙️ Installation & Setup
+
+## Prerequisites
+
+Before running this project, ensure the following requirements are installed:
+
+- Python 3.x
+- Docker (recommended for monitoring environment)
+- Git
+
+
+---
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+
+cd SMSML_JihanKusumawardhani
+````
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r "Membangun Model/requirements.txt"
+```
+
+---
+
+# 🚀 Running Project
+
+## 1. Model Development
+
+Run the model development script:
+
+```bash
+python "Membangun Model/modelling.py"
+```
+
+The process will perform:
+
+* Data preparation
+* Model training
+* Model saving
+
+---
+
+## 2. Model Optimization
+
+Run hyperparameter tuning:
+
+```bash
+python "Membangun Model/modelling_tuning.py"
+```
+
+This process evaluates model configurations to improve performance.
+
+---
+
+## 3. Run Inference Service
+
+Start the inference workflow:
+
+```bash
+python "Monitoring dan Logging/inference.py"
+```
+
+The inference process simulates prediction requests and exposes metrics for monitoring.
+
+---
+
+## 4. Monitoring System
+
+Launch monitoring services using:
+
+* Prometheus
+* Grafana
+
+Prometheus configuration:
+
+```
+Monitoring dan Logging/prometheus.yml
+```
+
+The monitoring dashboard provides visualization of:
+
+* Application metrics
+* Inference performance
+* Operational monitoring data
+
+---
+
+# 📷 Project Documentation
+
+The repository contains documentation and evidence including:
+
+* Model development results
+* Model evaluation results
+* Prometheus monitoring visualization
+* Grafana dashboard visualization
+* Alerting configuration evidence
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project, I gained experience in:
+
+* Building end-to-end machine learning workflows.
+* Developing and optimizing predictive models.
+* Implementing machine learning inference systems.
+* Applying MLOps concepts for monitoring and observability.
+* Understanding machine learning lifecycle management.
+* Implementing engineering practices for reliable AI systems.
+
+---
+
+# 🔐 Security Notes
+
+This repository is intended for demonstration and learning purposes.
+
+Sensitive information such as:
+
+* API keys
+* Credentials
+* Private configuration files
+* Proprietary datasets
+
+should not be included in public repositories.
+
+---
+
+# 📝 License
+
+This project is released under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Jihan Kusumawardhani**
+
+Informatics Engineering Graduate
+
+Interested in:
+
+* Web Development
+* Artificial Intelligence
+* Machine Learning
+* MLOps
+* Data-driven Application Development
+
+GitHub:
+
+[https://github.com/jihanbuildspace](https://github.com/jihanbuildspace)
+
+```
+```
